@@ -1,171 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dona Regina - Banco de Leite Humano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dona Regina - Banco de Leite Humano</title>
 
-  <link rel="stylesheet" href="https://cdn.dsgov.com.br/rawline/rawline.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="../style/style.css"/>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Rawline -->
+    <link rel="stylesheet" href="https://cdn.dsgov.com.br/rawline/rawline.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
 
-  <!-- Header da secretaria da saude -->
-  <script type="text/javascript" charset="utf-8" src="../script/topo.js"> </script>
+    <!-- Header da Secretaria -->
+    <script src="../script/topo.js"></script>
 
-  <nav>
-    <div class="nav-logo">
-      <span>[logo dona regina]</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">Página inicial</a></li>
-      <li><a href="#">Informações</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#">Redes Sociais</a></li>
-      <li><a href="#">Sobre Nós</a></li>
-      <li><a href="#">Cadastro</a></li>
-    </ul>
-  </nav>
+    <!-- Barra superior -->
+    <header class="header-top">
+        <div class="header-top-inner">
+          
+        </div>
 
-  <section class="hero">
-    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=1600&q=80" alt="Mãe e bebê"/>
-    <div class="hero-text">
-      <h1>Essa semana coletamos N litros de leite</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia nemo reprehenderit
-         quos, omnis corrupti eos deleniti nihil minus ad aliquam, repellendus labore
-         exercitationem fuga at dignissimos odio est eveniet enim.</p>
-    </div>
-  </section>
+    </header>
 
-  <section class = "sobre-nos">
-    <div class="sobre-nos-content">
-      <div class="sobre-nos-text">
-        <h2>Sobre nós</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Dolor
-           corporis, quisquam voluptate deleniti cumque, magnam, doloremque consequatur
-           consequatur cum incidunt? Voluptas, voluptate. Dolor corporis, quisquam
-           voluptate deleniti cumque, magnam, doloremque consequatur consequatur cum
-         incidunt?</p>
-    </div>
+    <!-- Navbar -->
+    <nav class="navbar-dark">
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-home"></i> Página inicial</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> Informações</a></li>
+            <li><a href="#"><i class="fas fa-phone"></i> Contato</a></li>
+            <li><a href="#"><i class="fas fa-share-alt"></i> Redes Sociais</a></li>
+            <li><a href="#"><i class="fas fa-hospital"></i> Sobre Nós</a></li>
+            <li><a href="#"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=1600&q=80" alt="Mãe e bebê">
+
+        <div class="hero-text">
+            <h1>Essa semana coletamos N litros de leite</h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia nemo reprehenderit quos, omnis corrupti eos deleniti
+                nihil minus ad aliquam.
+            </p>
+        </div>
     </section>
 
-    <div class="equipe">
-      <h2>Nossa equipe</h2>
-      <div class="equipe-text">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, officiis. Provident
-           debitis, nesciunt officia iste enim ducimus ad sequi nemo quis a quisquam atque
-           obcaecati, quod incidunt. Illum, officiis quidem! Lorem, ipsum dolor sit amet
-           consectetur adipisicing elit. Reprehenderit, similique pariatur. Voluptatem odit
-           inventore dolorum fugiat alias autem! Quisquam quam voluptatibus eum tempore
-           autem quibusdam vero necessitatibus, placeat dicta maxime.</p>
-      </div>
+    <!-- Sobre Nós -->
+    <section class="sobre-nos">
 
-      <h2 class="membros-titulo">Membros</h2>
+        <div class="sobre-nos-content">
+            <div class="sobre-nos-text">
+                <h2>Sobre nós</h2>
 
-      <div class="equipe-membros-lista">
-
-        <div class="membro-item">
-          <div class="membro-card">
-            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/18765757-icone-de-perfil-de-usuario-em-estilo-simples-ilustracao-em-avatar-membro-no-fundo-isolado-conceito-de-negocio-de-sinal-de-permissao-humana-vetor.jpg" alt="Foto do membro"/>
-            <div class="membro-info">
-              <p class="membro-nome">Nome do membro</p>
-              <p class="membro-funcao">Função do Membro</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptas, voluptate. Dolor corporis, quisquam voluptate
+                    deleniti cumque.
+                </p>
             </div>
-          </div>
-          <div class="membro-descricao">
-            <p>Responsável pela coleta e controle de qualidade do leite humano no banco. Atua diretamente com as doadoras, garantindo segurança e cuidado em todo o processo.</p>
-          </div>
         </div>
 
-        <div class="membro-item">
-          <div class="membro-card">
-            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/18765757-icone-de-perfil-de-usuario-em-estilo-simples-ilustracao-em-avatar-membro-no-fundo-isolado-conceito-de-negocio-de-sinal-de-permissao-humana-vetor.jpg" alt="Foto do membro"/>
-            <div class="membro-info">
-              <p class="membro-nome">Nome do membro</p>
-              <p class="membro-funcao">Função do Membro</p>
+        <!-- Equipe -->
+        <div class="equipe">
+
+            <h2>Nossa equipe</h2>
+
+            <div class="equipe-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident debitis, nesciunt officia iste enim ducimus.
+                </p>
             </div>
-          </div>
-          <div class="membro-descricao">
-            <p>Coordena as atividades administrativas do banco de leite, organiza os registros e garante o funcionamento eficiente do setor junto à equipe médica.</p>
-          </div>
+
+            <h2 class="membros-titulo">Membros</h2>
+
+            <div class="equipe-membros-lista">
+
+                <!-- Membro 1 -->
+                <div class="membro-item">
+
+                    <div class="membro-card">
+
+                        <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/18765757-icone-de-perfil-de-usuario-em-estilo-simples-ilustracao-em-avatar-membro-no-fundo-isolado-conceito-de-negocio-de-sinal-de-permissao-humana-vetor.jpg">
+
+                        <div class="membro-info">
+
+                            <p class="membro-nome">
+                                <i class="fas fa-user"></i>
+                                Nome do membro
+                            </p>
+
+                            <p class="membro-funcao">
+                                <i class="fas fa-briefcase"></i>
+                                Função do membro
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="membro-descricao">
+                        <p>
+                            Responsável pela coleta e controle de qualidade do
+                            leite humano no banco.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Membro 2 -->
+                <div class="membro-item">
+
+                    <div class="membro-card">
+
+                        <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/18765757-icone-de-perfil-de-usuario-em-estilo-simples-ilustracao-em-avatar-membro-no-fundo-isolado-conceito-de-negocio-de-sinal-de-permissao-humana-vetor.jpg">
+
+                        <div class="membro-info">
+
+                            <p class="membro-nome">
+                                <i class="fas fa-user"></i>
+                                Nome do membro
+                            </p>
+
+                            <p class="membro-funcao">
+                                <i class="fas fa-briefcase"></i>
+                                Função do membro
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="membro-descricao">
+                        <p>
+                            Coordena as atividades administrativas do banco de
+                            leite e organiza os registros.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
-    </div>
+    </section>
 
-  </section>
+    <!-- Footer -->
+    <footer>
 
-  <footer>
-    <div class="footer-top">
+        <div class="footer-top">
 
-      <div class="footer-brand">
-        <div class="footer-brand-header">
-          <div class="logo-box">Logo</div>
-          
-          <div>
-            <p>Banco de Leite Humano</p>
-            <span>Hospital Dona Regina</span>
-          </div>
+            <div class="footer-brand">
+
+                <div class="footer-brand-header">
+
+                    <img src="../assets/logo-uft.png"
+                         class="footer-logo-img"
+                         alt="Logo">
+
+                    <div>
+                        <p>Banco de Leite Humano</p>
+                        <span>Hospital Dona Regina</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    A maior maternidade pública do Estado do Tocantins,
+                    referência em atendimentos para usuários do SUS.
+                </p>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Contato</h4>
+
+                <ul>
+
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+
+                        <span>
+                            Q. 104 Norte Rua NE 5, 41<br>
+                            Palmas - TO
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>(63) 3027-5070</span>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>blhdonaregina@gmail.com</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Links úteis</h4>
+
+                <ul>
+
+                    <li><i class="fas fa-chevron-right"></i><a href="https://www.to.gov.br/saude/">Secretaria da Saúde</a></li>
+                    <li><i class="fas fa-chevron-right"></i><a href="#">Portal da Saúde</a></li>
+                    <li><i class="fas fa-chevron-right"></i><a href="#">Política de Privacidade</a></li>
+                    <li><i class="fas fa-chevron-right"></i><a href="#">Perguntas Frequentes</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-social">
+
+                <h4>Siga nossas redes</h4>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+
+                <p class="footer-copyright">
+                    © 2026 Hospital Dona Regina.
+                </p>
+
+            </div>
+
         </div>
-        <p>A maior maternidade Pública do Estado do Tocantins, referência em atendimentos para usuários do SUS.</p>
-      </div>
 
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <ul>
-          <li>
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Q. 104 Norte Rua NE 5, 41 - Plano Diretor Norte<br>Palmas - TO, 77006-020</span>
-          </li>
-          <li>
-            <i class="fas fa-phone"></i>
-            <span>(63) 3027-5070</span>
-          </li>
-          <li>
-            <i class="fas fa-envelope"></i>
-            <span>blhdonaregina@gmail.com</span>
-          </li>
-        </ul>
-      </div>
+        <div class="footer-bottom">
 
-      <div class="footer-col">
-        <h4>Links úteis</h4>
-        <ul>
-          <li><a href="https://www.to.gov.br/saude/">Secretaria da Saúde</a></li>
-          <li><a href="#">Portal da Saúde</a></li>
-          <li><a href="#">Política de Privacidade</a></li>
-          <li><a href="#">Perguntas Frequentes</a></li>
-        </ul>
-      </div>
+            <div class="logo-placeholder">
+                <img src="https://www.sisemp.org.br/media/sisemp/_versions/b5ace700f60379_slide_noticia.jpg">
+            </div>
 
-      <div class="footer-social">
-        <h4>Siga nossas redes</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <div class="logo-placeholder">
+                <img src="https://docs.uft.edu.br/share/proxy/alfresco-noauth/api/internal/shared/node/7PQSHELoSuCc5vnQQtfG8Q/content/bras%C3%A3oUFT_fundotransparente_RGB.png">
+            </div>
+
+            <div class="logo-placeholder">
+                <img src="https://coliga.digital/_next/image?url=https%3A%2F%2Fprd-coliga-medias.s3.us-east-1.amazonaws.com%2FBrasao_do_Tocantins_svg_18b5d28532.png&w=384&q=75">
+            </div>
+
+            <div class="logo-placeholder">
+                <img src="../assets/logo-dona-regina.png" alt="Logo Dona Regina">
+            </div>
+
         </div>
-        <p class="footer-copyright">© 2026 Hospital Dona Regina.<br>Todos os direitos reservados.</p>
-      </div>
 
-    </div>
-
-    <div class="footer-bottom">
-      <div class="logo-placeholder">
-        <img src = "https://www.sisemp.org.br/media/sisemp/_versions/b5ace700f60379_slide_noticia.jpg" alt="Logo SUS">
-      </div>
-      <div class="logo-placeholder">
-        <img src= "https://docs.uft.edu.br/share/proxy/alfresco-noauth/api/internal/shared/node/7PQSHELoSuCc5vnQQtfG8Q/content/bras%C3%A3oUFT_fundotransparente_RGB.png" alt="Logo UFT">
-      </div>
-      <div class="logo-placeholder">
-        <img src= "https://coliga.digital/_next/image?url=https%3A%2F%2Fprd-coliga-medias.s3.us-east-1.amazonaws.com%2FBrasao_do_Tocantins_svg_18b5d28532.png&w=384&q=75" alt="Logo do Governo do Tocantins">
-      </div>
-      <div class="logo-placeholder">
-        <img src= "https://br.web.img2.acsta.net/pictures/19/09/18/21/44/4368748.jpg" alt="Logo da regina">
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 </body>
 </html>

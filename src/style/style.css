@@ -18,11 +18,15 @@ body {
 }
 
 nav {
-  display: inline-flex;
-  justify-content: center !important;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 10px 290px;
-  background: rgba(0, 0, 0, 0.4) !important;
+
+  width: 100%;
+
+  padding: 0;
+
+  background: rgba(0,0,0,.40);
   backdrop-filter: blur(20px);
 }
 
@@ -36,22 +40,38 @@ nav {
   width: 48px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 36px;
-  list-style: none;
+.nav-links{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-  transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 14px 22px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: .25s;
 }
 
 .nav-links a:hover {
-  color: #1a5fa8;
+    background: #1D4ED8;
+    color: white;
+}
+
+.nav-links a i{
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
 }
 
 .hero {
@@ -123,24 +143,29 @@ nav {
 
 .sobre-nos-content {
   display: flex;
-  align-items: center;
-  gap: 48px;
+  justify-content: center;
 }
-.sobre-nos-content img {
-  width: 50%;
-  min-width: 300px;
-  border-radius: 6px;
+
+/* Bloco fica centralizado na página (pelo flex do pai),
+   mas o conteúdo dentro dele (h2 e p) fica alinhado
+   à esquerda entre si, como no exemplo de referência. */
+.sobre-nos-text {
+  max-width: 900px;
+  text-align: left;
 }
+
 .sobre-nos-text h2 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 24px;
-  text-align: center;
+  text-align: left;
 }
+
 .sobre-nos-text p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.9;
   color: #222;
+  text-align: left;
 }
 
 .torne-se-doadora {
@@ -187,17 +212,26 @@ nav {
 /* ── EQUIPE ── */
 .equipe {
   margin-top: 64px;
-  padding: 0 48px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Bloco fica centralizado na página (pelo align-items do pai),
+   mas h2 e p ficam alinhados à esquerda entre si dentro do bloco. */
 .equipe h2 {
-  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 24px;
 }
 
 .equipe-text {
+  width: 100%;
+  max-width: 900px;
   margin-bottom: 48px;
 }
 
@@ -205,10 +239,13 @@ nav {
   font-size: 16px;
   line-height: 1.9;
   color: #222;
+  text-align: left;
 }
 
 .membros-titulo {
-  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 32px;
@@ -216,6 +253,8 @@ nav {
 
 /* Lista — um membro por linha */
 .equipe-membros-lista {
+  align-self: flex-start;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
