@@ -345,6 +345,12 @@ footer {
   gap: 10px;
 }
 
+.logo-placeholder img{
+  width: 100%;
+  height: auto;
+
+}
+
 .footer-brand-header .logo-box {
   width: 38px;
   height: 38px;
