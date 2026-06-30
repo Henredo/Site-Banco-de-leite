@@ -546,3 +546,133 @@ footer {
     display: none;
   }
 }
+/* ── SEÇÃO EXCLUSIVA: BANCO DE LEITE (PADRÃO GOV TO) ── */
+
+.inst-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 48px;
+}
+
+.inst-secao {
+  margin-bottom: 48px;
+}
+
+.inst-titulo-principal {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+  color: rgb(51, 51, 51);
+  margin-bottom: 32px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 12px;
+}
+
+.inst-subtitulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  color: rgb(51, 51, 51);
+  margin-bottom: 20px;
+}
+
+.inst-texto {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgb(51, 51, 51);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Bloco de Missão e Valores */
+.inst-mve {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: #f9f9f9;
+  padding: 32px;
+  border-radius: 6px;
+  border-left: 4px solid #1a5fa8;
+}
+
+.mve-titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(51, 51, 51);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mve-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mve-lista li {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mve-lista li i {
+  color: #1a5fa8;
+  font-size: 14px;
+}
+
+/* Grid de Botões Estilo Gov TO */
+.inst-botoes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.inst-btn {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a5fa8;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.inst-btn:hover {
+  background: #154c86;
+}
+
+.inst-btn i {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVIDADE EXCLUSIVA DO BANCO DE LEITE ── */
+@media (max-width: 900px) {
+  .inst-container {
+    padding: 40px 20px;
+  }
+  .inst-mve, .inst-botoes-grid {
+    grid-template-columns: 1fr;
+  }
+  .inst-titulo-principal {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
