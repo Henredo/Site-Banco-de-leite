@@ -1072,3 +1072,204 @@ height: 80%;
     grid-template-columns: 1fr; /* 1 coluna em celulares */
   }
 }
+
+/* ── ESTILIZAÇÃO DA PÁGINA DE CONTATO ── */
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.contato-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 32px;
+  border-top: 4px solid #1a5fa8; /* Borda superior com o azul do estado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contato-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Faz o card ocupar as duas colunas no grid (usado para mapas e redes) */
+.contato-card-large {
+  grid-column: span 2;
+}
+
+.contato-icone {
+  background: #e8b400; /* Amarelo da identidade visual */
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contato-card h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  color: #1a5fa8;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.contato-card p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(51, 51, 51);
+  margin-bottom: 12px;
+}
+
+/* Formatação da lista de Pontos de Coleta */
+.contato-card ul {
+  list-style: none;
+  width: 100%;
+}
+
+.contato-card ul li {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 1.5;
+}
+
+.contato-card ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contato-card ul li span {
+  display: inline-block;
+  color: #555;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.contato-btn {
+  margin-top: auto; /* Empurra o botão para o fundo do card */
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+}
+
+.mapa-container {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+}
+
+.contato-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* ── LINKS DE REDES SOCIAIS (TEXTO) ── */
+.lista-redes li strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.lista-redes li strong i {
+  color: #1a5fa8; /* Pinta os ícones do lado do nome com a cor institucional */
+  font-size: 18px;
+}
+
+.link-rede-social {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 26px; /* Alinha o link com o texto, respeitando o espaço do ícone */
+  color: #1a5fa8;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.link-rede-social:hover {
+  color: #e8b400; /* Fica amarelo ao passar o mouse */
+  text-decoration: underline;
+}
+
+/* ── INTERATIVIDADE DE COPIAR ── */
+.copiar-texto {
+  cursor: pointer;
+  color: #1a5fa8 !important; /* Força a cor do link independentemente do span pai */
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.copiar-texto:hover {
+  color: #e8b400 !important;
+  background-color: rgba(26, 95, 168, 0.05);
+}
+
+.copiar-texto i {
+  font-size: 0.9em;
+  margin-left: 6px;
+  opacity: 0.7;
+}
+
+/* ── TOAST NOTIFICATION (AVISO DE COPIADO) ── */
+#toast-aviso {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.3s, bottom 0.3s, visibility 0.3s;
+}
+
+#toast-aviso.mostrar {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px; /* Faz o aviso dar uma subidinha na tela */
+}
+
+/* ── RESPONSIVIDADE PARA CONTATOS ── */
+@media (max-width: 800px) {
+  .contato-grid {
+    grid-template-columns: 1fr; /* Muda para 1 coluna no celular */
+  }
+  .contato-card-large {
+    grid-column: span 1; /* Retira o comportamento de 2 colunas nos cards grandes */
+  }
+  .contato-card {
+    padding: 24px;
+  }
+}
