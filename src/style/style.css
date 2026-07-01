@@ -711,6 +711,11 @@ footer {
   }
 }
 
+  #h1-servicos {
+    margin-left: 44vw;
+    margin-top: 24px;
+  }
+
 .container-card-servico {
   display: block;
   width: 80vw;
@@ -719,11 +724,15 @@ footer {
 }
 
 .card-servico {
-  display: flexbox;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 24px;
-  height: 360px;
+  height: auto;
+  min-height: 360px;
   border: 8px inset #1C6EA4;
-  border-radius: 4px; 
+  border-radius: 4px;
+  overflow: visible;
 }
 
 #tittle-servico {
@@ -736,15 +745,16 @@ footer {
 #row-servico {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   margin-left: 56px;
   gap: 4%;
-  max-height: 280px;
+  min-height: 0;
 }
 
 .barra-amarela {
   position: absolute;
   background-color: #e8b400;
-  height: 300px;
+  height: 90%;
   width: 9px;
   margin-left: 16px;
   margin-top: 20px;
@@ -753,8 +763,9 @@ footer {
 #desc-servico {
   display: flex;
   flex-direction: column;
-  width: 512px;
-  max-width: 35%;
+  height: 340px;
+  flex: 1 1 320px;
+  width: 38.8%;
   padding: 8px;
   gap: 8px;
 }
@@ -765,20 +776,20 @@ footer {
   padding: 8px;
   overflow-y: scroll;
   overflow-wrap: break-word;
+  max-width: 400px;
 }
 
 .div-imagem-servico {
   display: flex;
   width: 400px;
-  justify-content: center;
-  align-items: center;
+  align-self: center;
   margin-left: 40px;
 }
 
 #imagem-servico {
   max-height: 100%;
   max-width: 100%;
-  min-height: 150px;
+  min-height: 300px;
   border: 4px solid #1e8dd7;
   border-radius: 20px;
   padding: 4px;
@@ -817,52 +828,55 @@ footer {
   transform: scale(1.1);
 }
 
+/* ── RESPONSIVIDADE EXCLUSIVA DA PAGINA DE SERVIÇOS ── */
 @media (max-width: 950px) {
+  #h1-servicos {
+    margin-left: 40%;
+  }
+
   .container-card-servico {
   display: block;
   width: 80vw;
-  margin-left: 10vw;
+  margin-left: 5vw;
   margin-top: 2vw;
 }
 
 .card-servico {
-  display: flexbox;
-  margin-bottom: 24px;
-  height: 360px;
+  width: 88vw;
   border: 8px inset #1C6EA4;
-  border-radius: 4px; 
+  border-radius: 4px;
+  overflow: visible;
+  height: auto;
 }
 
 #tittle-servico {
   height: fit-content;
   margin: 12px;
-  margin-left: 56px;
+  margin-left: 32px;
   font-size: 20px;
 }
 
 #row-servico {
-  display: flex;
-  flex-direction: row;
-  margin-left: 56px;
-  gap: 4%;
-  max-height: 280px;
+  display: grid;
+  grid-template-columns: 35vw 35vw;
+  grid-template-rows: auto auto;
+  margin-left: 32px;
+  gap: 0px;
 }
 
 .barra-amarela {
-  position: absolute;
-  background-color: #e8b400;
-  height: 300px;
-  width: 9px;
-  margin-left: 16px;
-  margin-top: 20px;
+  display: none;
 }
 
 #desc-servico {
-  display: flex;
-  flex-direction: column;
-  width: 512px;
-  max-width: 35%;
+  width: 32vw;
   padding: 8px;
+  gap: 8px;
+  height: fit-content;
+}
+
+#desc-servico h3 {
+  width: 32vw;
   gap: 8px;
 }
 
@@ -872,19 +886,22 @@ footer {
   padding: 8px;
   overflow-y: scroll;
   overflow-wrap: break-word;
+  width: 30vw;
+  max-height: 240px;
+  min-height: 60px;
 }
 
 .div-imagem-servico {
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
-  width: 400px;
-  justify-content: center;
-  align-items: center;
-  margin-left: 40px;
+  width: 32vw;
+  grid-row: 2;
 }
 
 #imagem-servico {
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 320px;
+  max-width: 50vw;
   min-height: 150px;
   border: 4px solid #1e8dd7;
   border-radius: 20px;
@@ -894,20 +911,38 @@ footer {
 .div-botao-servico{
   display: flex;
   flex-direction: column;
-  gap: 64px;
-  width: 512px;
+  gap: 16px;
+  width: 32vw;
   justify-content: center;
   align-content: center;
   text-align: center;
+  justify-self: center;
+  align-self: baseline;
+  margin-left: 10%;
+  height: 100%;
+  border: 4px solid #e8b400;
+  border-radius: 8px;
+  padding: 1px;
 }
 
-.botao-servico {
+.div-botao-servico h2 {
+  font-size: larger;
+  overflow-wrap: break-word;
+}
+}
+
+@media (max-width: 550px) {
+  
+  #h1-servicos {
+    margin-left: 35%;
+  }
+  .botao-servico {
   font-size: 22px;
   color: white;
   border-radius: 2rem;
   cursor: pointer;
-  width: 200px;
-  height: 50px;
+  width: 30vw;
+  height: 64px;
   border: none;
   background-color: #3653f8;
   display: flex;
@@ -915,5 +950,8 @@ footer {
   align-items: center;
   align-self: center;
   transition: all 0.1s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+.barra-amarela {
+height: 80%;
 }
 }
