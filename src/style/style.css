@@ -580,3 +580,222 @@ footer {
     line-height: 36px;
   }
 }
+/* ── ESTILIZAÇÃO DA PÁGINA DE PERGUNTAS E BUSCA ── */
+
+.faq-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 48px 64px;
+}
+
+.faq-secao-titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(51, 51, 51);
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* 1. Barra de Busca */
+.busca-wrapper {
+  margin-bottom: 48px;
+}
+
+.busca-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #1a5fa8; /* Azul do estado */
+  border-radius: 8px;
+  padding: 4px 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.busca-icone {
+  color: #1a5fa8;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+#campo-busca {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Alerta de Não Encontrado / WhatsApp */
+.busca-alerta {
+  margin-top: 16px;
+  background-color: #fff8e1;
+  border-left: 4px solid #e8b400; /* Amarelo do estado */
+  padding: 16px;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.busca-alerta p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.busca-alerta-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.btn-zap {
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.btn-zap:hover {
+  background-color: #1ebd54;
+}
+
+/* 2. Seção de Informações */
+.info-section {
+  margin-bottom: 56px;
+}
+
+.info-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-bloco {
+  background: #f9f9f9;
+  padding: 24px;
+  border-radius: 6px;
+  border-left: 4px solid #1a5fa8;
+}
+
+.info-bloco h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a5fa8;
+  margin-bottom: 10px;
+}
+
+.info-bloco p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(51, 51, 51);
+  text-align: justify;
+}
+
+/* 3. Seção de Perguntas (Grid de Cards Interativos) */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas perfeitas */
+  gap: 20px;
+}
+
+.faq-card {
+  background: #1a5fa8; /* Card começa totalmente azul */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.faq-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-pergunta {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+}
+
+.card-pergunta h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.icone-seta {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* O Segredo do Card Amarelo por baixo */
+.card-resposta {
+  background: #e8b400; /* Fundo amarelo do estado */
+  color: #222222;
+  max-height: 0; /* Começa escondido */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 20px;
+}
+
+.card-resposta p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Quando o card for clicado (.active adicionado pelo JS) */
+.faq-card.active .card-resposta {
+  max-height: 300px; /* Expande revelando o conteúdo */
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.faq-card.active .icone-seta {
+  transform: rotate(180deg); /* Seta gira pra cima */
+}
+
+/* Animação suave para o alerta aparecer */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 960px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+  }
+}
+
+@media (max-width: 650px) {
+  .faq-container {
+    padding: 30px 20px;
+  }
+  .faq-grid {
+    grid-template-columns: 1fr; /* 1 coluna em celulares */
+  }
+}
