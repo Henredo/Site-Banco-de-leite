@@ -23,7 +23,7 @@ nav {
   align-items: center;
 
   width: 100%;
-
+  height: 70px;
   padding: 0;
 
   background: rgba(0,0,0,.40);
@@ -74,39 +74,44 @@ nav {
     text-align: center;
 }
 
-.hero {
-  position: relative;
-  width: 100%;
-  height: 560px;
-  overflow: hidden;
-  
+/* ── SLIDER ── */
+.slider img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 40px; 
 }
 
-.hero img {
+/* ── HERO (Ajustado e com a Barra de Relevo) ── */
+.hero {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
+  padding: 48px 20px; 
+  background-color: #ffffff;
+
+  border-top: 1px solid #e2e8f0; 
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.12), 
+              0 -4px 6px -1px rgba(0, 0, 0, 0.03);
 }
 
 .hero-text {
-  position: absolute;
-  bottom: 80px;
-  left: 48px;
-  max-width: 620px;
+  max-width: 960px; 
+  margin: 0 auto;   
 }
 
 .hero-text h1 {
+  font-family: "Roboto", sans-serif;
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 16px;
-  color: #111;
+  color: rgb(51, 51, 51);
 }
 
 .hero-text p {
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  color: #111;
+  color: rgb(51, 51, 51);
 }
 
 .perguntas-frequentes {
@@ -146,19 +151,18 @@ nav {
   justify-content: center;
 }
 
-/* Bloco fica centralizado na página (pelo flex do pai),
-   mas o conteúdo dentro dele (h2 e p) fica alinhado
-   à esquerda entre si, como no exemplo de referência. */
 .sobre-nos-text {
   max-width: 900px;
   text-align: left;
 }
 
 .sobre-nos-text h2 {
-  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px; /* Ajustado para 24px, ficando menor que os 30px do subtítulo */
   font-weight: 700;
   margin-bottom: 24px;
   text-align: left;
+  color: rgb(51, 51, 51);
 }
 
 .sobre-nos-text p {
@@ -208,117 +212,6 @@ nav {
   color: white;
 }
 
-
-/* ── EQUIPE ── */
-.equipe {
-  margin-top: 64px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Bloco fica centralizado na página (pelo align-items do pai),
-   mas h2 e p ficam alinhados à esquerda entre si dentro do bloco. */
-.equipe h2 {
-  width: 100%;
-  max-width: 900px;
-  text-align: left;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.equipe-text {
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 48px;
-}
-
-.equipe-text p {
-  font-size: 16px;
-  line-height: 1.9;
-  color: #222;
-  text-align: left;
-}
-
-.membros-titulo {
-  width: 100%;
-  max-width: 900px;
-  text-align: left;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 32px;
-}
-
-/* Lista — um membro por linha */
-.equipe-membros-lista {
-  align-self: flex-start;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-/* Cada linha: foto à esquerda, descrição à direita */
-.membro-item {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-/* ── CARD (só a foto + nome/função) ── */
-.membro-card {
-  position: relative;
-  width: 200px;
-  min-width: 200px;
-  height: 250px;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.membro-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.membro-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 8px 10px;
-}
-
-.membro-nome {
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.4;
-}
-
-.membro-funcao {
-  font-size: 12px;
-  font-weight: 400;
-  color: #ddd;
-  line-height: 1.4;
-}
-
-/* ── DESCRIÇÃO — ao lado do card ── */
-.membro-descricao {
-  flex: 1;
-}
-
-.membro-descricao p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #333;
-}
-
 footer {
   background: #1a5fa8;
   color: #fff;
@@ -348,7 +241,6 @@ footer {
 .logo-placeholder img{
   width: 100%;
   height: auto;
-
 }
 
 .footer-brand-header .logo-box {
@@ -528,12 +420,6 @@ footer {
     min-width: unset;
   }
 
-  .membro-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 20px;
-  }
-
   footer {
     padding: 40px 20px 20px;
   }
@@ -577,7 +463,7 @@ footer {
 
 .inst-subtitulo {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 32px;
   color: rgb(51, 51, 51);
@@ -591,6 +477,18 @@ footer {
   line-height: 32px;
   color: rgb(51, 51, 51);
   margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Nova formatação idêntica ao .inst-texto para os itens de lista */
+.texto-lista {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgb(51, 51, 51);
+  margin-bottom: 16px;
+  margin-left: 24px; /* Abre espaço na lateral esquerda para os marcadores aparecerem */
   text-align: justify;
 }
 
