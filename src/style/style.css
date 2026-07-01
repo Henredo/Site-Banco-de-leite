@@ -11,6 +11,34 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Scrolllbar bonitinha */
+body {
+  --sb-track-color: #dfe0ea;
+  --sb-thumb-color: #e8b400;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
 
 .topbar {
   height: 5px;
@@ -698,11 +726,17 @@ footer {
   border-radius: 4px; 
 }
 
+#tittle-servico {
+  height: fit-content;
+  margin: 12px;
+  margin-left: 56px;
+}
+
 #row-servico {
   display: flex;
   flex-direction: row;
   margin-left: 56px;
-  gap: 16px;
+  gap: 4%;
   max-height: 280px;
 }
 
@@ -715,12 +749,6 @@ footer {
   margin-top: 20px;
 }
 
-#tittle-servico {
-  height: fit-content;
-  margin: 12px;
-  margin-left: 56px;
-}
-
 #desc-servico {
   display: flex;
   flex-direction: column;
@@ -730,9 +758,11 @@ footer {
 }
 
 .sep-descritivo {
-  background-color: #1e8dd7;
+  border: 4px solid #1e8dd7;
   border-radius: 20px;
   padding: 8px;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 
 .div-imagem-servico {
@@ -740,17 +770,25 @@ footer {
   width: 400px;
   justify-content: center;
   align-items: center;
+  margin-left: 40px;
 }
 
 #imagem-servico {
   max-height: 100%;
+  max-width: 100%;
+  border: 4px solid #1e8dd7;
+  border-radius: 20px;
+  padding: 4px;
 }
 
 .div-botao-servico{
   display: flex;
+  flex-direction: column;
+  gap: 64px;
   width: 512px;
   justify-content: center;
   align-content: center;
+  text-align: center;
 }
 
 .botao-servico {
