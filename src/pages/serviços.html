@@ -35,35 +35,36 @@
         </ul>
     </nav>
 
-    <h1 class="titulo-servicos-pagina">Nossos Serviços</h1>
+    <h1 class="titulo-servicos-pagina" style="text-align: center; margin: 40px 0; font-family: 'Roboto', sans-serif; font-weight: 700; color: #333;">Nossos Serviços</h1>
 
-    <div class="container-card-servico">
+    <div class="container-card-servico" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; gap: 30px; margin-bottom: 60px;">
         
-        <div class="card-servico">
-            <div class="barra-amarela"></div>
-            <div class="conteudo-card">
-                <h2 class="tittle-servico">Coleta Domiciliar de Leite Materno</h2>
+        <!-- SERVIÇO 1: DOAÇÃO DE LEITE MATERNO (PRINCIPAL - NOVO) -->
+        <div class="card-servico" style="display: flex; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="barra-amarela" style="width: 6px; background-color: #e8b400; flex-shrink: 0;"></div>
+            <div class="conteudo-card" style="padding: 30px; width: 100%;">
+                <h2 class="tittle-servico" style="font-family: 'Roboto', sans-serif; font-size: 22px; font-weight: 700; color: #1a5fa8; margin-bottom: 20px;">Doação de Leite Materno (Principal)</h2>
                 
-                <div class="row-servico">
-                    <div class="info-servico-col">
+                <div class="row-servico" style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div class="info-servico-col" style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px;">
                         <div class="bloco-texto-servico">
-                            <h3><i class="fas fa-file-alt"></i> Descrição:</h3>
-                            <p>Rota especializada que busca o leite materno diretamente na residência da doadora cadastrada. A equipe do Hospital Dona Regina fornece os frascos estéreis, materiais de apoio e orientações necessárias para garantir a segurança da coleta.</p>
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-file-alt" style="color: #1a5fa8; margin-right: 8px;"></i> Descrição:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">O ato voluntário e solidário de doar o excesso de leite materno para salvar vidas. Todo o leite coletado passa por um rigoroso controle de qualidade, seleção e pasteurização no laboratório do próprio hospital antes de ser distribuído, garantindo um alimento 100% seguro para os recém-nascidos prematuros e de baixo peso internados na UTIN e UCIN.</p>
                         </div>
 
                         <div class="bloco-texto-servico">
-                            <h3><i class="fas fa-user-check"></i> Quem tem direito:</h3>
-                            <p>Mães lactantes saudáveis com excedente de leite, que não tomem medicamentos contraindicados, residam na área urbana atendida e tenham realizado o cadastro prévio no Banco de Leite.</p>
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-user-check" style="color: #1a5fa8; margin-right: 8px;"></i> Quem pode doar (Requisitos):</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Mães que estão amamentando ou ordenhando, que sejam saudáveis, tenham exames de pré-natal negativos ou atualizados para doenças transmissíveis pelo sangue, e que possuam um excedente de leite gerado após a mamada do seu próprio filho.</p>
                         </div>
 
-                        <div class="meio-atendimento-linha">
-                            <strong><i class="fas fa-laptop-house"></i> Meio de atendimento:</strong> <span>Presencial (Domicílio)</span>
+                        <div class="meio-atendimento-linha" style="font-size: 15px; color: #333; margin-top: 10px;">
+                            <strong><i class="fas fa-hospital-user" style="color: #1a5fa8; margin-right: 8px;"></i> Meio de atendimento:</strong> <span style="background: #edf2f7; padding: 4px 10px; border-radius: 4px; font-size: 14px;">Presencial (No Hospital) ou Domiciliar</span>
                         </div>
                     </div>
 
-                    <div class="div-botao-servico">
-                        <h2>Após conferir requisitos,<br>clique abaixo para solicitar!</h2>
-                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20serviço%20de%20coleta%20domiciliar%20de%20leite%20materno!', '_blank')">
+                    <div class="div-botao-servico" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #f7fafc; padding: 20px; border-radius: 6px; border: 1px dashed #cbd5e0;">
+                        <h2 style="font-size: 15px; font-weight: 600; color: #4a5568; line-height: 1.4; margin-bottom: 16px;">Após conferir requisitos,<br>clique abaixo para solicitar!</h2>
+                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20gostaria%20de%20saber%20mais%20e%20realizar%20a%20doação%20de%20leite%20materno!', '_blank')" style="background-color: #1D4ED8; color: white; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s; width: 100%;">
                             Solicitar Serviço
                         </button>
                     </div>
@@ -71,31 +72,32 @@
             </div>
         </div>
 
-        <div class="card-servico">
-            <div class="barra-amarela"></div>
-            <div class="conteudo-card">
-                <h2 class="tittle-servico">Consultoria e Apoio à Amamentação</h2>
+        <!-- SERVIÇO 2: COLETA DOMICILIAR DE LEITE MATERNO (AMPLIADO) -->
+        <div class="card-servico" style="display: flex; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="barra-amarela" style="width: 6px; background-color: #e8b400; flex-shrink: 0;"></div>
+            <div class="conteudo-card" style="padding: 30px; width: 100%;">
+                <h2 class="tittle-servico" style="font-family: 'Roboto', sans-serif; font-size: 22px; font-weight: 700; color: #1a5fa8; margin-bottom: 20px;">Coleta Domiciliar de Leite Materno</h2>
                 
-                <div class="row-servico">
-                    <div class="info-servico-col">
+                <div class="row-servico" style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div class="info-servico-col" style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px;">
                         <div class="bloco-texto-servico">
-                            <h3><i class="fas fa-file-alt"></i> Descrição:</h3>
-                            <p>Atendimento especializado focado em ajudar mães com dificuldades na amamentação, engurgitamento mamário, fissuras nos mamilos ou dúvidas sobre a pega correta do bebê, prevenindo o desmame precoce.</p>
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-file-alt" style="color: #1a5fa8; margin-right: 8px;"></i> Descrição:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Uma rota especializada do Corpo de Bombeiros em parceria com o Hospital Dona Regina que busca o leite materno ordenhado diretamente na residência da doadora cadastrada. No primeiro atendimento, a equipe realiza a entrega de um kit de higienização completo contendo frascos estéreis, touca, máscara e panfletos instrutivos para garantir total segurança biológica no manejo.</p>
                         </div>
 
                         <div class="bloco-texto-servico">
-                            <h3><i class="fas fa-user-check"></i> Quem tem direito:</h3>
-                            <p>Gestantes, puérperas, lactantes e familiares que necessitam de suporte técnico ou acolhimento especializado referente ao aleitamento materno.</p>
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-user-check" style="color: #1a5fa8; margin-right: 8px;"></i> Quem tem direito:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Mães lactantes saudáveis com excedente de leite que residam no perímetro urbano atendido de Palmas - TO e que tenham realizado o cadastro inicial completo junto ao Banco de Leite.</p>
                         </div>
 
-                        <div class="meio-atendimento-linha">
-                            <strong><i class="fas fa-hospital-user"></i> Meio de atendimento:</strong> <span>Presencial (No Hospital) ou Ambulatorial</span>
+                        <div class="meio-atendimento-linha" style="font-size: 15px; color: #333; margin-top: 10px;">
+                            <strong><i class="fas fa-laptop-house" style="color: #1a5fa8; margin-right: 8px;"></i> Meio de atendimento:</strong> <span style="background: #edf2f7; padding: 4px 10px; border-radius: 4px; font-size: 14px;">Presencial (Domicílio)</span>
                         </div>
                     </div>
 
-                    <div class="div-botao-servico">
-                        <h2>Após conferir requisitos,<br>clique abaixo para solicitar!</h2>
-                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20serviço%20de%20consultoria%20e%20apoyo%20à%20amamentação!', '_blank')">
+                    <div class="div-botao-servico" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #f7fafc; padding: 20px; border-radius: 6px; border: 1px dashed #cbd5e0;">
+                        <h2 style="font-size: 15px; font-weight: 600; color: #4a5568; line-height: 1.4; margin-bottom: 16px;">Após conferir requisitos,<br>clique abaixo para solicitar!</h2>
+                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20serviço%20de%20coleta%20domiciliar%20de%20leite%20materno!', '_blank')" style="background-color: #1D4ED8; color: white; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s; width: 100%;">
                             Solicitar Serviço
                         </button>
                     </div>
@@ -103,110 +105,211 @@
             </div>
         </div>
 
-        <div class="card-servico">
-            <div class="barra-amarela"></div>
-            <div class="conteudo-card">
-                <h2 class="tittle-servico">Doação de Frascos</h2>
+        <!-- SERVIÇO 3: CONSULTORIA E APOIO À AMAMENTAÇÃO (AMPLIADO) -->
+        <div class="card-servico" style="display: flex; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="barra-amarela" style="width: 6px; background-color: #e8b400; flex-shrink: 0;"></div>
+            <div class="conteudo-card" style="padding: 30px; width: 100%;">
+                <h2 class="tittle-servico" style="font-family: 'Roboto', sans-serif; font-size: 22px; font-weight: 700; color: #1a5fa8; margin-bottom: 20px;">Consultoria e Apoio à Amamentação</h2>
                 
-                <div class="row-servico">
-                    <div class="info-servico-col">
+                <div class="row-servico" style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div class="info-servico-col" style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px;">
                         <div class="bloco-texto-servico">
-                            <h3><i class="fas fa-file-alt"></i> Descrição:</h3>
-                            <p>Serviço de doação de frascos de leite humano para recém-nascidos e bebês em situação de vulnerabilidade.</p>
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-file-alt" style="color: #1a5fa8; margin-right: 8px;"></i> Descrição:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Atendimento clínico especializado, acolhedor e individualizado conduzido por profissionais de enfermagem, nutrição e pediatria. O foco é solucionar dificuldades práticas imediatas como fissuras e feridas nos mamilos, mamas empedradas (engurgitamento mamário), mastite, baixa produção aparente de leite, e o ensino detalhado da pega correta e posicionamento do bebê para prevenir o desmame precoce.</p>
                         </div>
 
                         <div class="bloco-texto-servico">
-                            <h3><i class="fas fa-user-check"></i> Quem pode doar:</h3>
-                            <p>Mães que estão amamentando e desejam doar leite humano para bebês em situação de vulnerabilidade.</p>
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-user-check" style="color: #1a5fa8; margin-right: 8px;"></i> Quem tem direito:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Gestantes na fase de preparação, puérperas recentes, mães lactantes e suas redes de apoio/familiares que necessitem de suporte técnico focado no aleitamento materno bem-sucedido.</p>
                         </div>
 
-                        <div class="meio-atendimento-linha">
-                            <strong><i class="fas fa-hospital-user"></i> Meio de atendimento:</strong> <span>Presencial (No Hospital)</span>
+                        <div class="meio-atendimento-linha" style="font-size: 15px; color: #333; margin-top: 10px;">
+                            <strong><i class="fas fa-hospital-user" style="color: #1a5fa8; margin-right: 8px;"></i> Meio de atendimento:</strong> <span style="background: #edf2f7; padding: 4px 10px; border-radius: 4px; font-size: 14px;">Presencial (No Hospital / Ambulatório)</span>
                         </div>
                     </div>
 
-                    <div class="div-botao-servico">
-                        <h2>Após conferir requisitos,<br>clique abaixo para solicitar!</h2>
-                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20serviço%20de%20doação%20de%20frascos%20de%20leite%20humano!', '_blank')">
+                    <div class="div-botao-servico" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #f7fafc; padding: 20px; border-radius: 6px; border: 1px dashed #cbd5e0;">
+                        <h2 style="font-size: 15px; font-weight: 600; color: #4a5568; line-height: 1.4; margin-bottom: 16px;">Após conferir requisitos,<br>clique abaixo para solicitar!</h2>
+                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consultoria%20de%20apoio%20à%20amamentação!', '_blank')" style="background-color: #1D4ED8; color: white; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s; width: 100%;">
                             Solicitar Serviço
                         </button>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- SERVIÇO 4: CADASTRO COMO DOADORA (ONLINE E PRESENCIAL - NOVO) -->
+        <div class="card-servico" style="display: flex; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="barra-amarela" style="width: 6px; background-color: #e8b400; flex-shrink: 0;"></div>
+            <div class="conteudo-card" style="padding: 30px; width: 100%;">
+                <h2 class="tittle-servico" style="font-family: 'Roboto', sans-serif; font-size: 22px; font-weight: 700; color: #1a5fa8; margin-bottom: 20px;">Cadastrar-se como Doadora</h2>
+                
+                <div class="row-servico" style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div class="info-servico-col" style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px;">
+                        <div class="bloco-texto-servico">
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-file-alt" style="color: #1a5fa8; margin-right: 8px;"></i> Descrição:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">O primeiro passo essencial para se tornar uma doadora oficial. O processo envolve o preenchimento de uma ficha epidemiológica e de saúde, seguido da análise obrigatória do cartão de pré-natal para validação de exames de sangue recentes (como HIV, Sífilis, Hepatites B e C). O cadastro garante que a doação ocorra de forma segura tanto para quem doa quanto para quem recebe.</p>
+                        </div>
+
+                        <div class="bloco-texto-servico">
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-user-check" style="color: #1a5fa8; margin-right: 8px;"></i> Quem tem direito:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Qualquer mulher em fase de amamentação que apresente secreção láctea superior às necessidades do seu próprio filho e deseje se voluntariar.</p>
+                        </div>
+
+                        <div class="meio-atendimento-linha" style="font-size: 15px; color: #333; margin-top: 10px;">
+                            <strong><i class="fas fa-globe" style="color: #1a5fa8; margin-right: 8px;"></i> Meio de atendimento:</strong> <span style="background: #edf2f7; padding: 4px 10px; border-radius: 4px; font-size: 14px;">Online (WhatsApp/Formulário) e Presencial (No Hospital)</span>
+                        </div>
+                    </div>
+
+                    <div class="div-botao-servico" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #f7fafc; padding: 20px; border-radius: 6px; border: 1px dashed #cbd5e0;">
+                        <h2 style="font-size: 15px; font-weight: 600; color: #4a5568; line-height: 1.4; margin-bottom: 16px;">Após conferir requisitos,<br>clique abaixo para solicitar!</h2>
+                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20gostaria%20de%20me%20cadastrar%20como%20doadora%20de%20leite%20materno!', '_blank')" style="background-color: #1D4ED8; color: white; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s; width: 100%;">
+                            Solicitar Cadastro
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVIÇO 5: TIRAR DÚVIDAS (ONLINE OU PRESENCIAL - NOVO) -->
+        <div class="card-servico" style="display: flex; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="barra-amarela" style="width: 6px; background-color: #e8b400; flex-shrink: 0;"></div>
+            <div class="conteudo-card" style="padding: 30px; width: 100%;">
+                <h2 class="tittle-servico" style="font-family: 'Roboto', sans-serif; font-size: 22px; font-weight: 700; color: #1a5fa8; margin-bottom: 20px;">Atendimento para Tirar Dúvidas</h2>
+                
+                <div class="row-servico" style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div class="info-servico-col" style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px;">
+                        <div class="bloco-texto-servico">
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-file-alt" style="color: #1a5fa8; margin-right: 8px;"></i> Descrição:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Canal direto de suporte técnico e acolhimento humanizado para responder dúvidas rápidas ou complexas ligadas ao universo da amamentação. Você pode se informar sobre a forma correta de armazenar o leite em casa, o tempo de validade no congelador, rotina de livre demanda, mitos sobre "leite fraco" e retorno seguro ao ambiente de trabalho sem desmame.</p>
+                        </div>
+
+                        <div class="bloco-texto-servico">
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-user-check" style="color: #1a5fa8; margin-right: 8px;"></i> Quem tem direito:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Mães, pais, familiares, cuidadores e qualquer cidadão da comunidade que precise de orientação qualificada sobre aleitamento materno ou doações.</p>
+                        </div>
+
+                        <div class="meio-atendimento-linha" style="font-size: 15px; color: #333; margin-top: 10px;">
+                            <strong><i class="fas fa-comments" style="color: #1a5fa8; margin-right: 8px;"></i> Meio de atendimento:</strong> <span style="background: #edf2f7; padding: 4px 10px; border-radius: 4px; font-size: 14px;">Online (WhatsApp / Telefone) ou Presencial (No Banco de Leite)</span>
+                        </div>
+                    </div>
+
+                    <div class="div-botao-servico" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #f7fafc; padding: 20px; border-radius: 6px; border: 1px dashed #cbd5e0;">
+                        <h2 style="font-size: 15px; font-weight: 600; color: #4a5568; line-height: 1.4; margin-bottom: 16px;">Precisa de orientação rápida?<br>Fale com nossa equipe técnica:</h2>
+                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20tenho%20algumas%20dúvidas%20sobre%20amamentação/doação%20e%20gostaria%20de%20ajuda!', '_blank')" style="background-color: #1D4ED8; color: white; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s; width: 100%;">
+                            Tirar Dúvidas Online
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVIÇO 6: DOAÇÃO DE FRASCOS DE VIDRO (CORRIGIDO) -->
+        <div class="card-servico" style="display: flex; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="barra-amarela" style="width: 6px; background-color: #e8b400; flex-shrink: 0;"></div>
+            <div class="conteudo-card" style="padding: 30px; width: 100%;">
+                <h2 class="tittle-servico" style="font-family: 'Roboto', sans-serif; font-size: 22px; font-weight: 700; color: #1a5fa8; margin-bottom: 20px;">Doação de Frascos de Vidro (Para Armazenamento)</h2>
+                
+                <div class="row-servico" style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div class="info-servico-col" style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px;">
+                        <div class="bloco-texto-servico">
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-file-alt" style="color: #1a5fa8; margin-right: 8px;"></i> Descrição:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Campanha de arrecadação de recipientes vazios de vidro com tampas plásticas rosqueáveis (estilo pote de café solúvel ou maionese). Esses recipientes de vidro são os únicos utilizados no armazenamento de leite humano, pois resistem ao processo térmico extremo de esterilização e pasteurização em laboratório, sem liberar toxinas e mantendo as propriedades do leite intactas.</p>
+                        </div>
+
+                        <div class="bloco-texto-servico">
+                            <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 6px;"><i class="fas fa-user-check" style="color: #1a5fa8; margin-right: 8px;"></i> Quem pode doar:</h3>
+                            <p style="font-size: 15px; line-height: 1.6; color: #555; text-align: justify;">Qualquer pessoa física, empresa ou instituição da comunidade que possua frascos com estas características acumulados em casa e queira dar uma destinação nobre, sustentável e solidária.</p>
+                        </div>
+
+                        <div class="meio-atendimento-linha" style="font-size: 15px; color: #333; margin-top: 10px;">
+                            <strong><i class="fas fa-box" style="color: #1a5fa8; margin-right: 8px;"></i> Meio de atendimento:</strong> <span style="background: #edf2f7; padding: 4px 10px; border-radius: 4px; font-size: 14px;">Presencial (Entrega no Hospital / Banco de Leite)</span>
+                        </div>
+                    </div>
+
+                    <div class="div-botao-servico" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #f7fafc; padding: 20px; border-radius: 6px; border: 1px dashed #cbd5e0;">
+                        <h2 style="font-size: 15px; font-weight: 600; color: #4a5568; line-height: 1.4; margin-bottom: 16px;">Tem frascos de vidro em casa?<br>Saiba onde e como entregar:</h2>
+                        <button class="botao-servico" onclick="window.open('https://wa.me/5563999999999?text=Olá,%20tenho%20frascos%20de%20vidro%20para%20doar%20e%20gostaria%20de%20saber%20onde%20entregar!', '_blank')" style="background-color: #1D4ED8; color: white; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s; width: 100%;">
+                            Combinar Entrega
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <div class="footer-brand-header">
+                <img src="../assets/logo - BL.png" class="footer-logo-img" alt="Logo" width="100px">
+                <div>
+                    <p>Banco de Leite Humano</p>
+                    <span>Hospital Dona Regina</span>
+                </div>
+            </div>
+            <p>
+                A maior maternidade pública do Estado do Tocantins,
+                referência em atendimentos para usuários do SUS.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>
+                        Q. 104 Norte Rua NE 5, 41<br>
+                        Palmas - TO
+                    </span>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <span>(63) 3027-5120</span>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>blhdonaregina@gmail.com</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Links úteis</h4>
+            <ul>
+                <li><i class="fas fa-chevron-right"></i><a href="https://www.to.gov.br/saude/">Secretaria da Saúde</a></li>
+                <li><i class="fas fa-chevron-right"></i><a href="https://www.to.gov.br/saude/porte-iii-hospital-e-maternidade-dona-regina-hmdr/1ui795ojm2bq">Hospital e Maternidade Dona Regina</a></li>
+                <li><i class="fas fa-chevron-right"></i><a href="Informações.html">Perguntas Frequentes</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Siga nossas redes</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5563999999999?"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+            <p class="footer-copyright">
+                © 2026 Hospital Dona Regina.
+            </p>
         </div>
     </div>
-    </body>
-
-    <footer>
-        <div class="footer-top">
-            <div class="footer-brand">
-                <div class="footer-brand-header">
-                    <img src="../assets/logo - BL.png" class="footer-logo-img" alt="Logo" width="100px">
-                    <div>
-                        <p>Banco de Leite Humano</p>
-                        <span>Hospital Dona Regina</span>
-                    </div>
-                </div>
-                <p>
-                    A maior maternidade pública do Estado do Tocantins,
-                    referência em atendimentos para usuários do SUS.
-                </p>
-            </div>
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <ul>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>
-                            Q. 104 Norte Rua NE 5, 41<br>
-                            Palmas - TO
-                        </span>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <span>(63) 3027-5120</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <span>blhdonaregina@gmail.com</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Links úteis</h4>
-                <ul>
-                    <li><i class="fas fa-chevron-right"></i><a href="https://www.to.gov.br/saude/">Secretaria da Saúde</a></li>
-                    <li><i class="fas fa-chevron-right"></i><a href="https://www.to.gov.br/saude/porte-iii-hospital-e-maternidade-dona-regina-hmdr/1ui795ojm2bq">Hospital e Maternidade Dona Regina</a></li>
-                    <li><i class="fas fa-chevron-right"></i><a href="Informações.html">Perguntas Frequentes</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Siga nossas redes</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5563999999999?"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                </div>
-                <p class="footer-copyright">
-                    © 2026 Hospital Dona Regina.
-                </p>
-            </div>
+    <div class="footer-bottom">
+        <div class="logo-placeholder">
+            <img src="https://www.sisemp.org.br/media/sisemp/_versions/b5ace700f60379_slide_noticia.jpg">
         </div>
-        <div class="footer-bottom">
-            <div class="logo-placeholder">
-                <img src="https://www.sisemp.org.br/media/sisemp/_versions/b5ace700f60379_slide_noticia.jpg">
-            </div>
-            <div class="logo-placeholder">
-                <img src="https://docs.uft.edu.br/share/proxy/alfresco-noauth/api/internal/shared/node/7PQSHELoSuCc5vnQQtfG8Q/content/bras%C3%A3oUFT_fundotransparente_RGB.png">
-            </div>
-            <div class="logo-placeholder">
-                <img src="https://coliga.digital/_next/image?url=https%3A%2F%2Fprd-coliga-medias.s3.us-east-1.amazonaws.com%2FBrasao_do_Tocantins_svg_18b5d28532.png&w=384&q=75">
-            </div>
-            <div class="logo-placeholder">
-                <img src="../assets/logo - BL.png" alt="Logo Dona Regina">
-            </div>
+        <div class="logo-placeholder">
+            <img src="https://docs.uft.edu.br/share/proxy/alfresco-noauth/api/internal/shared/node/7PQSHELoSuCc5vnQQtfG8Q/content/bras%C3%A3oUFT_fundotransparente_RGB.png">
         </div>
-    </footer>
+        <div class="logo-placeholder">
+            <img src="https://coliga.digital/_next/image?url=https%3A%2F%2Fprd-coliga-medias.s3.us-east-1.amazonaws.com%2FBrasao_do_Tocantins_svg_18b5d28532.png&w=384&q=75">
+        </div>
+        <div class="logo-placeholder">
+            <img src="../assets/logo - BL.png" alt="Logo Dona Regina">
+        </div>
+    </div>
+</footer>
 
 </html>
