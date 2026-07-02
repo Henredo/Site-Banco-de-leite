@@ -112,6 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   }
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     
     // ==========================================
     // 1. FUNCIONALIDADE DOS CARDS (SANFONA)

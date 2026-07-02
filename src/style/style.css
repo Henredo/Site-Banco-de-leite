@@ -1478,6 +1478,50 @@ footer {
   flex-shrink: 0;
 }
 
+/* ── Card de depoimento em destaque (maior, ocupa a largura toda) ── */
+.depoimento-card-destaque {
+  grid-column: 1 / -1; /* ocupa as 3 colunas do grid */
+  padding: 40px 44px 32px;
+}
+
+.depoimento-card-destaque .depoimento-texto {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.depoimento-card-destaque .depoimento-texto p {
+  margin-bottom: 16px;
+}
+
+.depoimento-card-destaque .depoimento-texto p:last-child {
+  margin-bottom: 0;
+}
+
+/* Avatar com a logo do Banco de Leite, no lugar das iniciais */
+.depoimento-avatar-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #1a5fa8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden; /* corta a imagem no formato do círculo */
+}
+
+.depoimento-avatar-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preenche o círculo todo, sem sobras brancas */
+}
+
+@media (max-width: 640px) {
+  .depoimento-card-destaque {
+    padding: 28px 24px 24px;
+  }
+}
+
 .depoimento-autora h4 {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
