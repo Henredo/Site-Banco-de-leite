@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dona Regina - Banco de Leite Humano</title>
+    <title>Dona Regina - Contatos</title>
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,68 +41,13 @@
             <li><a href="serviços.html"><i class="fas fa-share-alt"></i> Serviços</a></li>
             <li><a href="Banco_de_Leite.html"><i class="fas fa-hospital"></i> Sobre Nós</a></li>
             <li><a href="Contato.html"><i class="fas fa-phone"></i> Contato</a></li>
-            <li><a href="Doadora.html"><i class="fas fa-user-plus"></i> Seja Doadora </a></li>
+            <li><a href="#"><i class="fas fa-user-plus"></i> Seja Doadora </a></li>
         </ul>
     </nav>
 
-    <div class="home-titulo-container">
-        <h1 class="home-titulo-principal">Banco de Leite Humano do Hospital e Maternidade Dona Regina Siqueira Campos</h1>
-    </div>
+        
 
-    <section class="slider-wrapper">
-        <div class="slider-container">
-            
-            <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=1600&q=80" alt="Campanha Agosto Dourado">
-                <div class="slide-legenda">
-                    <h3>Campanha Agosto Dourado</h3>
-                    <p>Mês de conscientização, proteção e incentivo ao aleitamento materno no Tocantins.</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="../assets/foto - BL_frascoleite.png" alt="Sustentabilidade e Doação de Frascos">
-                <div class="slide-legenda">
-                    <h3>Sustentabilidade: Doe Frascos de Vidro</h3>
-                    <p>Quem não amamenta também ajuda! Aceitamos potes de vidro com tampa de plástico (tipo café ou maionese).</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="../assets/foto - BL_frente.png" alt="Doação de Leite Materno">
-                <div class="slide-legenda">
-                    <h3>Um Gesto Simples que Salva Vidas</h3>
-                    <p>Qualquer quantidade de leite doada ajuda a alimentar e fortalecer recém-nascidos prematuros na UTI.</p>
-                </div>
-            </div>
-
-            <button class="slider-btn btn-prev" onclick="mudarSlide(-1)">&#10094;</button>
-            <button class="slider-btn btn-next" onclick="mudarSlide(1)">&#10095;</button>
-            
-        </div>
-    </section>
-
-    <!-- Hero -->
-     <section class="hero">
-        <div class="hero-text">
-            
-            <div class="hero-action-wrapper">
-                <a href="Doadora.html" class="btn-seja-doadora">
-                    <i class="fas fa-heart"></i> Seja uma Dadora
-                </a>
-            </div>
-
-            <h1>Essa semana coletamos N litros de leite</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia nemo reprehenderit quos, omnis corrupti eos deleniti
-                nihil minus ad aliquam.
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-   <footer>
+      <footer>
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="footer-brand-header">
@@ -173,32 +118,5 @@
             </div>
         </div>
     </footer>
-
-<script>
-        let indexAtual = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function mostrarSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            
-            indexAtual = index;
-            if (indexAtual >= slides.length) indexAtual = 0;
-            if (indexAtual < 0) indexAtual = slides.length - 1;
-            
-            slides[indexAtual].classList.add('active');
-        }
-
-        function mudarSlide(direcao) {
-            mostrarSlide(indexAtual + direcao);
-        }
-
-        // Passa o slide automaticamente a cada 5 segundos (5000ms)
-        setInterval(() => {
-            mudarSlide(1);
-        }, 5000);
-    </script>
-</body>
-</html>
-
 </body>
 </html>

@@ -73,24 +73,153 @@ nav {
     text-align: center;
 }
 
-/* ── SLIDER ── */
-.slider img {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-    padding-top: 40px; 
+/* ── TITULO HOME ── */
+.home-titulo-container {
+  max-width: 1200px;
+  margin: 40px auto 20px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
+.home-titulo-principal {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a5fa8; /* Azul institucional */
+  line-height: 1.4;
+}
+
+/* ── SLIDER / CARROSSEL COM LINHAS SEPARADORAS ── */
+.slider-wrapper {
+  width: 70%; 
+  margin: 0 auto 20px auto;
+  border-top: 2px solid #e1e7ec;    
+  border-bottom: 2px solid #e1e7ec; 
+  padding: 24px 0; 
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 760px; /* AUMENTADO: De 400px para 520px para a foto não ficar fina */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Configuração dos Slides */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cortar sem distorcer ou esticar */
+}
+
+/* Legenda Preta Transparente por cima da imagem */
+.slide-legenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); /* Degradê escuro para dar leitura */
+  color: #ffffff;
+  padding: 30px 24px;
+  z-index: 3;
+}
+
+.slide-legenda h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.slide-legenda p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #f0f0f0;
+  line-height: 1.4;
+}
+
+/* Botões do Carrossel (Setinhas) */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 14px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background: #1a5fa8; /* Fica azul ao passar o mouse */
+}
+
+.btn-prev { left: 16px; }
+.btn-next { right: 16px; }
+
+/* Responsividade para telas de celulares */
+@media (max-width: 768px) {
+  .slider-wrapper { width: 90%; }
+  .slider-container { height: 340px; }
+  .home-titulo-principal { font-size: 20px; }
+  .slide-legenda h3 { font-size: 16px; }
+  .slide-legenda p { font-size: 13px; }
+  .slider-btn { padding: 8px 12px; font-size: 14px; }
+}
+
+/* -- Botão seja doadora -- */
+.btn-seja-doadora {
+  font-family: "Roboto", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1D4ED8; /* Azul solicitado */
+  color: #ffffff; /* Letras brancas */
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(29, 78, 216, 0.2); /* Sombra suave azul no botão */
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-seja-doadora:hover {
+  background-color: #1a5fa8; /* Escurece levemente ao passar o mouse */
+  transform: translateY(-2px); /* Efeito sutil de subir ao passar o mouse */
+}
+
+.btn-seja-doadora i {
+  font-size: 16px;
+}
 /* ── HERO (Ajustado e com a Barra de Relevo) ── */
 .hero {
   width: 100%;
-  padding: 48px 20px; 
+  padding: 30px 20px 48px 20px; /* Ajustado o espaçamento superior */
   background-color: #ffffff;
-
-  border-top: 1px solid #e2e8f0; 
-  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.12), 
-              0 -4px 6px -1px rgba(0, 0, 0, 0.03);
+  /* Borda e box-shadow de relevo removidos daqui para deixar contínuo! */
 }
 
 .hero-text {
@@ -111,6 +240,10 @@ nav {
   font-size: 16px;
   line-height: 1.75;
   color: rgb(51, 51, 51);
+}
+
+.hero-action-wrapper {
+  margin-bottom: 24px; /* Espaço entre o botão e o título de litros */
 }
 
 .perguntas-frequentes {
@@ -579,289 +712,207 @@ footer {
     line-height: 36px;
   }
 }
-  #h1-servicos {
-    margin-left: 44vw;
-    margin-top: 24px;
-  }
+/* ── PÁGINA DE SERVIÇOS RESTRUTURADA ── */
+
+.titulo-servicos-pagina {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 40px auto 20px auto;
+  font-size: 32px;
+  color: #1a5fa8; /* Azul institucional padrão */
+  font-weight: 700;
+}
 
 .container-card-servico {
-  display: block;
-  width: 80vw;
-  margin-left: 10vw;
-  margin-top: 2vw;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
 }
 
+/* O Card com design limpo e plano (sem inset) */
 .card-servico {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 24px;
-  height: auto;
-  min-height: 360px;
-  border: 8px inset #1C6EA4;
-  border-radius: 4px;
-  overflow: visible;
+  background-color: #ffffff;
+  border: 1px solid #e1e7ec;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
-#tittle-servico {
-  height: fit-content;
-  margin: 12px;
-  margin-left: 56px;
-  font-size: 20px;
-}
-
-#row-servico {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-left: 56px;
-  gap: 4%;
-  min-height: 0;
-}
-
+/* Barra amarela de destaque agora cobre 100% da lateral do card */
 .barra-amarela {
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 8px;
   background-color: #e8b400;
-  height: 90%;
-  width: 9px;
-  margin-left: 16px;
-  margin-top: 20px;
 }
 
-/* Scrolllbar bonitinha */
-.sep-descritivo-p {
-  --sb-track-color: rgba(0,0,0,.0);
-  --sb-thumb-color: #e8b400;
-  --sb-size: 14px;
+.conteudo-card {
+  padding: 24px 24px 24px 32px; /* Margem interna equilibrada */
 }
 
-.sep-descritivo-p::-webkit-scrollbar {
-  width: var(--sb-size)
+.tittle-servico {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #111111;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.sep-descritivo-p::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 3px;
-}
-
-.sep-descritivo-p::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 8px;
-  
-}
-
-@supports not selector(::-webkit-scrollbar) {
-  .sep-descritivo-p {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
-  }
-}
-
-#desc-servico {
+/* Alinhamento lado a lado (Informações vs Botão) */
+.row-servico {
   display: flex;
-  flex-direction: column;
-  height: 340px;
-  flex: 1 1 320px;
-  width: 38.8%;
-  padding: 8px;
-  gap: 8px;
+  gap: 32px;
+  align-items: stretch;
 }
 
-.sep-descritivo {
-  border: 4px solid #1e8dd7;
-  border-radius: 20px;
-  padding: 8px;
-  overflow-wrap: break-word;
-  max-width: 400px;
-}
-
-.sep-descritivo-p {
-  border: 4px solid #1e8dd7;
-  border-radius: 20px;
-  padding: 8px;
-  overflow-y: scroll;
-  overflow-wrap: break-word;
-  max-width: 400px;
-}
-
-.div-imagem-servico {
-  display: flex;
-  width: 400px;
-  align-self: center;
-  margin-left: 40px;
-}
-
-#imagem-servico {
-  max-height: 100%;
-  max-width: 100%;
-  min-height: 300px;
-  border: 4px solid #1e8dd7;
-  border-radius: 20px;
-  padding: 4px;
-}
-
-.div-botao-servico{
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  width: 512px;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-.botao-servico {
-  font-size: 22px;
-  color: white;
-  border-radius: 2rem;
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  border: none;
-  background-color: #3653f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  transition: all 0.1s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-.botao-servico:hover {
-  --edge-light: hsla(0, 0%, 50%, 1);
-  text-shadow: 0px 0px 10px var(--text-light);
-  box-shadow: inset 0.4px 1px 4px var(--edge-light),
-    2px 4px 8px hsla(0, 0%, 0%, 0.295);
-  transform: scale(1.1);
-}
-
-/* ── RESPONSIVIDADE EXCLUSIVA DA PAGINA DE SERVIÇOS ── */
-@media (max-width: 950px) {
-  #h1-servicos {
-    margin-left: 40%;
-  }
-
-  .container-card-servico {
-  display: block;
-  width: 80vw;
-  margin-left: 5vw;
-  margin-top: 2vw;
-}
-
-.card-servico {
-  width: 88vw;
-  border: 8px inset #1C6EA4;
-  border-radius: 4px;
-  overflow: visible;
-  height: auto;
-}
-
-#tittle-servico {
-  height: fit-content;
-  margin: 12px;
-  margin-left: 32px;
-  font-size: 20px;
-}
-
-#row-servico {
-  display: grid;
-  grid-template-columns: 35vw 35vw;
-  grid-template-rows: auto auto;
-  margin-left: 32px;
-  gap: 0px;
-}
-
-.barra-amarela {
-  display: none;
-}
-
-#desc-servico {
-  width: 32vw;
-  padding: 8px;
-  gap: 8px;
-  height: fit-content;
-}
-
-#desc-servico h3 {
-  width: 32vw;
-  gap: 8px;
-}
-
-.sep-descritivo {
-  border: 4px solid #1e8dd7;
-  border-radius: 20px;
-  padding: 8px;
-  overflow-y: scroll;
-  overflow-wrap: break-word;
-  width: 30vw;
-  max-height: 240px;
-  min-height: 60px;
-}
-
-.div-imagem-servico {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  width: 32vw;
-  grid-row: 2;
-}
-
-#imagem-servico {
-  max-height: 320px;
-  max-width: 50vw;
-  min-height: 150px;
-  border: 4px solid #1e8dd7;
-  border-radius: 20px;
-  padding: 4px;
-}
-
-.div-botao-servico{
+/* Coluna que agrupa os blocos de texto */
+.info-servico-col {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 32vw;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  justify-self: center;
-  align-self: baseline;
-  margin-left: 10%;
-  height: 100%;
-  border: 4px solid #e8b400;
+}
+
+/* Caixas de Descrição e Quem tem Direito (Tamanhos equilibrados) */
+.bloco-texto-servico {
+  border: 2px solid #1e8dd7;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fcfdfe;
+}
+
+.bloco-texto-servico h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #1e8dd7;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bloco-texto-servico p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444444;
+  text-align: justify;
+}
+
+/* Campo de Meio de Atendimento em apenas uma linha */
+.meio-atendimento-linha {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  border: 2px solid #e1e7ec;
   border-radius: 8px;
-  padding: 1px;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meio-atendimento-linha strong {
+  color: #333333;
+}
+
+.meio-atendimento-linha span {
+  color: #1e8dd7;
+  font-weight: 600;
+}
+
+/* Seção Lateral do Botão de Ação */
+.div-botao-servico {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-left: 1px dashed #e1e7ec;
+  padding-left: 32px;
 }
 
 .div-botao-servico h2 {
-  font-size: larger;
-  overflow-wrap: break-word;
-}
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  line-height: 1.4;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 550px) {
-  
-  #h1-servicos {
-    margin-left: 35%;
-  }
-  .botao-servico {
-  font-size: 22px;
-  color: white;
-  border-radius: 2rem;
-  cursor: pointer;
-  width: 30vw;
-  height: 64px;
+.botao-servico {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #1D4ED8; /* Azul uniforme com o botão da home */
   border: none;
-  background-color: #3653f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  transition: all 0.1s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-.barra-amarela {
-height: 80%;
+  border-radius: 6px;
+  width: 100%;
+  padding: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(29, 78, 216, 0.15);
+  transition: background-color 0.2s, transform 0.2s;
 }
+
+.botao-servico:hover {
+  background-color: #1a5fa8;
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVIDADE PARA CELULAR E TABLET ── */
+@media (max-width: 950px) {
+  .row-servico {
+    flex-direction: column; /* Joga o botão para baixo nas telas menores */
+    gap: 24px;
+  }
+  
+  .div-botao-servico {
+    width: 100%;
+    border-left: none;
+    border-top: 1px dashed #e1e7ec;
+    padding-left: 0;
+    padding-top: 24px;
+  }
+
+  .div-botao-servico h2 {
+    margin-bottom: 12px;
+  }
+
+  .botao-servico {
+    max-width: 280px;
+  }
 }
 
 /* ── ESTILIZAÇÃO DA PÁGINA DE PERGUNTAS E BUSCA ── */
+
+/* Estilização dos Tópicos Separadores do FAQ */
+.faq-topico-grupo {
+  margin-bottom: 40px;
+}
+
+.faq-topico-titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #1a5fa8; /* Azul padrão do Dona Regina */
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed #e1e7ec;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+/* Gira a seta do card quando ele estiver com a classe .active */
+.faq-card.active .icone-seta {
+  transform: rotate(180deg);
+}
 
 .faq-container {
   max-width: 960px;
