@@ -1381,31 +1381,31 @@ footer {
    SERVIÇOS (serviços.html)
    ══════════════════════════════════════════════════════════════════ */
 
-.botao-servico {
+/* ── Linha de telefone (não é link/botão) ── */
+.info-telefone-servico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #1a5fa8;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.info-telefone-servico i {
+  font-size: 16px;
+}
+
+.divisor-ou {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #1D4ED8;
-  border: none;
-  border-radius: 6px;
-  width: 100%;
-  padding: 12px 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(29, 78, 216, 0.15);
-  transition: background 0.2s;
-  display: inline-block;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-.botao-servico:hover {
-  background-color: #1e40af;
-  transform: translateY(-2px);
-}
-
-.botao-servico i {
-  margin-right: 8px;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 12px 0;
 }
 
 .botao-whatsapp {
@@ -1439,11 +1439,6 @@ footer {
   font-size: 18px;
 }
 
-@media (max-width: 950px) {
-  .botao-servico {
-    max-width: 280px;
-  }
-}
 
 
 /* ══════════════════════════════════════════════════════════════════
@@ -1606,12 +1601,10 @@ footer {
   margin-top: 4px;
 }
 
-.contato-btn {
+.contato-acao {
   margin-top: auto;
   width: 100%;
-  justify-content: center;
   text-align: center;
-  padding: 12px;
 }
 
 /* ── Links de redes sociais ── */
