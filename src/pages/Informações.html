@@ -1,128 +1,505 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dona Regina - Informações</title>
+    <title>Dona Regina - informações</title>
 
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Rawline -->
     <link rel="stylesheet" href="https://cdn.dsgov.com.br/rawline/rawline.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <link rel="stylesheet" href="../style/style.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
 
-    <div class="topbar"></div>
+    <!-- Header da Secretaria -->
+    <script src="../script/topo.js"></script>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="nav-logo">
-      <span>[logo dona regina]</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Página inicial</a></li>
-      <li><a href="#">Informações</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#">Redes Sociais</a></li>
-      <li><a href="#">Sobre Nós</a></li>
-      <li><a href="#">Cadastro</a></li>
-    </ul>
-    </nav>
-    <section class="perguntas-frequentes">
-        <h1>Perguntas Frequentes</h1>
-        <div class="pergunta">
-            <h2>Como posso doar leite materno?</h2>
-            <p>Para doar leite materno, você pode entrar em contato conosco através do nosso site ou telefone. Nós forneceremos todas as informações necessárias e orientações para a doação.</p>
-        </div>
-        <div class="pergunta">
-            <h2>Quem pode doar leite materno?</h2>
-            <p>Qualquer mãe saudável que esteja amamentando pode ser uma doadora de leite materno. É importante que a doadora siga as orientações de higiene e saúde para garantir a qualidade do leite doado.</p>
-        </div>
-        <div class="pergunta">
-            <h2>Como o leite materno é utilizado?</h2>
-            <p>O leite materno doado é utilizado para alimentar bebês prematuros ou com necessidades especiais que não podem ser amamentados por suas mães. Ele é processado e distribuído para hospitais e unidades de saúde.</p>
-        </div>
-
-        <div class="pergunta">
-            <h2>Posso doar leite materno se estiver tomando medicamentos?</h2>
-            <p>Alguns medicamentos podem ser compatíveis com a doação de leite materno, mas é importante consultar um profissional de saúde para avaliar a segurança da doação. Recomendamos que as doadoras informem sobre qualquer medicamento que estejam tomando.</p>
-        </div>
-    </section>
-    <footer>
-    <div class="footer-top">
-
-      <!-- Col 1 - Marca -->
-      <div class="footer-brand">
-        <div class="footer-brand-header">
-          <div class="logo-box">Logo</div>
+    <!-- Barra superior -->
+    <header class="header-top">
+        <div class="header-top-inner">
           
-          <div>
-            <p>Banco de Leite Humano</p>
-            <span>Hospital Dona Regina</span>
+        </div>
+
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar-dark">
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Página inicial</a></li>
+            <li><a href="Informações.html"><i class="fas fa-info-circle"></i> Informações</a></li>
+            <li><a href="serviços.html"><i class="fas fa-share-alt"></i> Serviços</a></li>
+            <li><a href="Banco_de_Leite.html"><i class="fas fa-hospital"></i> Sobre Nós</a></li>
+            <li><a href="Contato.html"><i class="fas fa-phone"></i> Contato</a></li>
+            <li><a href="Doadora.html"><i class="fas fa-user-plus"></i> Seja Doadora </a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Perguntas frequentes / informações -->
+
+  <div class="faq-container">
+
+  <div class="busca-wrapper">
+    <div class="busca-box">
+      <i class="fas fa-search busca-icone"></i>
+      <input type="text" id="campo-busca" placeholder="Digite sua dúvida ou o que você está procurando...">
+    </div>
+    
+    <div id="busca-sem-resultado" class="busca-alerta" style="display: none;">
+      <p>Não encontrou o que procurava? <strong>Tire sua dúvida conosco:</strong></p>
+      <div class="busca-alerta-links">
+        <a href="https://wa.me/5563999999999" target="_blank" class="btn-zap">
+          <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
+        <span>ou ligue: <strong>(63) 3218-7700</strong></span>
+      </div>
+    </div>
+  </div>
+
+ <section class="info-section">
+    <h2 class="faq-secao-titulo">Informações para a Doadora</h2>
+    
+    <div class="info-lista">
+      
+      <div class="info-bloco item-buscavel">
+        <h3><i class="fas fa-heart"></i> Quem pode ser uma doadora?</h3>
+        <p>Pode doar leite humano toda mulher que esteja amamentando, tenha boa saúde e produza leite em quantidade suficiente para alimentar seu bebê e ainda doar o excedente. Para garantir a segurança dos recém-nascidos que receberão o leite, a doadora passa por uma avaliação realizada pelo Banco de Leite Humano, que fornece todas as orientações necessárias para a coleta e o armazenamento corretos.</p>
+      </div>
+
+      <div class="info-bloco item-buscavel">
+        <h3><i class="fas fa-user-plus"></i> Como se tornar uma doadora?</h3>
+        <p>Tornar-se uma doadora é simples! O primeiro passo é entrar em contato com o Banco de Leite Humano pelos telefones <strong>(63) 3027-5083</strong> ou <strong>(63) 3027-5120</strong> para realizar o seu cadastro. Após o cadastro, você receberá um kit de doação contendo touca e máscara descartáveis, frasco esterilizado, rótulo e gazes. Um profissional fornecerá todas as orientações sobre a utilização do kit e os cuidados com a higiene.</p>
+      </div>
+
+      <div class="info-bloco item-buscavel">
+        <h3><i class="fas fa-exclamation-triangle"></i> Boas práticas e restrições</h3>
+        <p>Para a segurança dos bebês, a doadora precisa cumprir alguns requisitos: estar amamentando ou ordenhando para o próprio filho; apresentar exames pré ou pós-natal compatíveis com a doação; e realizar exames específicos caso não tenha feito o pré-natal. <strong>Restrições importantes:</strong> não é permitido o uso de medicamentos incompatíveis com a amamentação, nem o consumo de álcool ou drogas ilícitas.</p>
+      </div>
+
+      <div class="info-bloco item-buscavel">
+        <h3><i class="fas fa-pump-medical"></i> Passo a passo: Como retirar e preparar o leite</h3>
+        <p>Procure um lugar limpo e tranquilo. Lave as mãos e braços até o cotovelo com água e sabão. Use potes de vidro com tampa plástica rosqueável higienizados (fervidos por 15 minutos e secos sobre um pano limpo). Massageie os seios com movimentos circulares e inicie a coleta direto no pote, deixando faltar dois dedos para encher. Identifique o frasco com seu nome e a data da primeira coleta. O leite pode ficar no congelador por até 10 dias. <em>Atenção: leite descongelado não pode ser recongelado!</em></p>
+      </div>
+
+      <div class="info-bloco item-buscavel">
+        <h3><i class="fas fa-truck"></i> Coleta em domicílio (Bombeiro Amigo do Peito)</h3>
+        <p>Você não precisa sair de casa para entregar o leite! O hospital se encarrega de buscar o leite doado na residência das mães cadastradas através do projeto <strong>Bombeiro Amigo do Peito</strong>. As interessadas podem solicitar a visita dos bombeiros pelos telefones <strong>0800 646 8283</strong> ou <strong>(63) 3218-7734</strong>.</p>
+      </div>
+
+      <div class="info-bloco item-buscavel">
+        <h3><i class="fas fa-recycle"></i> Não tem leite excedente? Doe frascos de vidro!</h3>
+        <p>Quem não está amamentando também pode salvar vidas! Aceitamos a doação de frascos de vidro do tipo maionese ou café solúvel com tampa plástica rosqueável. Esse material passa por uma esterilização rigorosa antes de ir para as mães. Empresas ou pessoas que queiram doar frascos podem entrar em contato pelo telefone <strong>(63) 3218-7734</strong>.</p>
+      </div>
+
+      <div class="info-bloco item-buscavel">
+        <h3><i class="fas fa-map-marker-alt"></i> Redes e Pontos de Coleta autorizados</h3>
+        <p>Além da nossa sede em Palmas, existem outros pontos oficiais. Confira o mais próximo:<br>
+        • <strong>Banco de Leite Dona Regina (Palmas):</strong> ACNE 1, Conj. 04, Lote 36/38. (Aberto 24h) - (63) 3218-7734.<br>
+        • <strong>Posto de Coleta UBS 403 Norte (Palmas):</strong> Alameda 01, APN 40 - (63) 3218-5205.<br>
+        • <strong>Banco de Leite Hosp. Dom Orione (Araguaína):</strong> Rua Dom Orione, 100 - (63) 3411-8787 Ramal 2358.<br>
+        • <strong>Banco de Leite Hosp. Regional de Gurupi:</strong> Rua Pres. Juscelino Kubitscheck, 1541 - (63) 3315-0258.<br>
+        • <strong>Posto de Coleta Tia Dedé (Porto Nacional):</strong> Rua Raquel de Carvalho, 143 - (63) 3363-8301.</p>
+      </div>
+      <section class="secao-doacao">
+    
+    <div class="doacao-topo">
+        <div class="card-requisitos">
+            <h2>Quem pode doar?</h2>
+            <p>Toda mulher que está amamentando, produz leite em excesso, é saudável e não faz uso de medicamentos que impeçam a doação.</p>
+        </div>
+        
+        <div class="card-contatos">
+            <h2>Bancos de Leite no Tocantins</h2>
+            <p>Se você tem leite excedente, entre em contato para que o banco faça a coleta na sua residência:</p>
+            <ul class="lista-contatos">
+                <li><strong>Palmas (HMDR):</strong> (63) 3218-7734</li>
+                <li><strong>Araguaína:</strong> (63) 3411-5626</li>
+                <li><strong>Gurupi:</strong> (63) 3315-0010</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="titulo-passos">Como realizar a coleta passo a passo</h2>
+    <div class="grid-passos">
+        
+        <div class="card-passo">
+            <div class="numero-passo">1</div>
+            <h3>Preparo do Frasco</h3>
+            <p>Escolha um frasco de vidro com tampa plástica (tipo café solúvel). Retire o rótulo e o papel interno da tampa. Ferva o frasco e a tampa por 15 minutos e deixe secar de boca para baixo sobre um pano limpo.</p>
+        </div>
+
+        <div class="card-passo">
+            <div class="numero-passo">2</div>
+            <h3>Higiene Pessoal</h3>
+            <p>Prenda os cabelos com touca ou lenço e cubra a boca e o nariz com uma máscara ou pano limpo. Lave bem as mãos e os braços até o cotovelo com água e sabão. Lave as mamas apenas com água limpa.</p>
+        </div>
+
+        <div class="card-passo">
+            <div class="numero-passo">3</div>
+            <h3>A Ordenha</h3>
+            <p>Em um local limpo e tranquilo, faça massagens circulares da aréola para a base da mama. Posicione o polegar acima da aréola e os dedos indicador e médio abaixo. Pressione em direção ao tórax e aperte. Despreze os primeiros jatos.</p>
+        </div>
+
+        <div class="card-passo">
+            <div class="numero-passo">4</div>
+            <h3>Armazenamento</h3>
+            <p>Coloque o leite no frasco esterilizado e identifique-o com seu nome e a data da primeira coleta. O frasco deve ser guardado imediatamente no congelador ou freezer, onde pode ficar armazenado por **até 10 dias**.</p>
+        </div>
+
+    </div>
+</section>
+
+    </div>
+  </section>
+
+ <section class="perguntas-section">
+      <h2 class="faq-secao-titulo">Perguntas Frequentes</h2>
+
+      <div class="faq-topico-grupo">
+        <h3 class="faq-topico-titulo"><i class="fas fa-user-shield"></i> Elegibilidade e Saúde da Mãe</h3>
+        <div class="faq-grid">
+          
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Vai faltar leite para meu filho se eu doar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não. A produção de leite aumenta conforme o estímulo. Quanto mais você amamenta ou retira o leite (ordenha), mais leite o seu corpo produz. Doar não reduz a quantidade para o seu bebê.</p>
+            </div>
           </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Existe quantidade mínima para doar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não. Qualquer quantidade é aceita, mesmo poucos mililitros. Um único frasco pode alimentar vários bebês prematuros internados na UTI neonatal, pois eles tomam pouquíssimos mililitros por vez.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Estou gripada/resfriada, posso doar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não é recomendado doar durante sintomas gripais. O banco de leite orienta suspender temporariamente a coleta para doação até que você esteja totalmente recuperada, visando a segurança absoluta dos bebês receptores.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Me vacinei recentemente, posso doar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Depende da vacina. Algumas vacinas exigem um pequeno intervalo de dias antes de liberar a doação (especialmente as de vírus vivo atenuado, como a da Febre Amarela). Consulte a equipe do banco de leite para informar qual dose você tomou.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Quem tem tatuagem ou piercing pode doar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Sim, desde que já tenha passado o período de segurança e cicatrização após o procedimento, que geralmente varia de 6 a 12 meses. É necessário informar a data da realização no momento do cadastro.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Uso cigarro ou bebida alcoólica socialmente, posso doar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não. O uso de álcool e tabaco é estritamente contraindicado para doadoras de leite materno, pois essas substâncias passam diretamente para o leite e são altamente prejudiciais aos bebês prematuros da UTI.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Mulheres que usam anticoncepcionais ou remédios contínuos podem doar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Sim, desde que os medicamentos sejam perfeitamente compatíveis com a amamentação. Anticoncepcionais à base de progesterona (comuns no pós-parto) são totalmente seguros. Sempre informe quais remédios utiliza ao se cadastrar.</p>
+            </div>
+          </div>
+
         </div>
-        <p>A maior maternidade Pública do Estado do Tocantins, referência em atendimentos para usuários do SUS.</p>
       </div>
 
-      <!-- Col 2 - Contato -->
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <ul>
-          <li>
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Q. 104 Norte Rua NE 5, 41 - Plano Diretor Norte<br>Palmas - TO, 77006-020</span>
-          </li>
-          <li>
-            <i class="fas fa-phone"></i>
-            <span>(63) 3027-5070</span>
-          </li>
-          <li>
-            <i class="fas fa-envelope"></i>
-            <span>blhdonaregina@gmail.com</span>
-          </li>
-        </ul>
-      </div>
+      <div class="faq-topico-grupo">
+        <h3 class="faq-topico-titulo"><i class="fas fa-vial"></i> Características do Leite</h3>
+        <div class="faq-grid">
 
-      <!-- Col 3 - Links úteis -->
-      <div class="footer-col">
-        <h4>Links úteis</h4>
-        <ul>
-          <li><a href="https://www.to.gov.br/saude/">Secretaria da Saúde</a></li>
-          <li><a href="#">Portal da Saúde</a></li>
-          <li><a href="#">Política de Privacidade</a></li>
-          <li><a href="#">Perguntas Frequentes</a></li>
-        </ul>
-      </div>
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Leite claro (“água de arroz”) é fraco?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não existe leite fraco! Todo leite materno é nutritivo, riquíssimo em anticorpos e perfeitamente adequado para o desenvolvimento do bebê. A aparência mais clara é comum no início da mamada/ordenha (leite anterior, rico em água e anticorpos).</p>
+            </div>
+          </div>
 
-      <!-- Col 4 - Redes Sociais -->
-      <div class="footer-social">
-        <h4>Siga nossas redes</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Leite empedrado e dor: o banco ajuda mesmo sem ser doadora?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Sim! Os bancos de leite oferecem apoio técnico, massagens de alívio e acolhimento gratuito para casos de ingurgitamento (leite empedrado), dor e mastite para qualquer mãe que esteja amamentando, mesmo que ela não seja uma doadora.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Por que a cor do leite muda? Às vezes está amarelado ou esverdeado.</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>A cor do leite varia naturalmente. O colostro (leite dos primeiros dias pós-parto) é amarelado e espesso. A alimentação da mãe também influencia sutilmente: consumir muitos vegetais verdes pode deixar o leite com um tom levemente esverdeado. Todas essas variações são normais.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>O leite congelado perde os nutrientes ou o sabor original?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não. Quando congelado imediatamente e mantido na temperatura correta, o leite materno preserva quase todas as suas propriedades biológicas, imunológicas e nutricionais protetoras, servindo perfeitamente como alimento essencial.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>O cheiro do leite materno descongelado pode mudar?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Sim, às vezes ele ganha um aroma que lembra sabão ou fica mais forte. Isso acontece pela ação da lipase, uma enzima natural do leite que quebra as gorduras para facilitar a digestão do bebê. Se o armazenamento foi correto, o leite está seguro e saudável.</p>
+            </div>
+          </div>
+
         </div>
-        <p class="footer-copyright">© 2026 Hospital Dona Regina.<br>Todos os direitos reservados.</p>
       </div>
 
-    </div>
+      <div class="faq-topico-grupo">
+        <h3 class="faq-topico-titulo"><i class="fas fa-boxes"></i> Armazenamento e Coleta</h3>
+        <div class="faq-grid">
 
-    <!-- Logos parceiros -->
-    <div class="footer-bottom">
-      <div class="logo-placeholder">
-        <img src = "https://www.sisemp.org.br/media/sisemp/_versions/b5ace700f60379_slide_noticia.jpg" alt="Logo SUS">
-      </div>
-      <div class="logo-placeholder">
-        <img src= "https://docs.uft.edu.br/share/proxy/alfresco-noauth/api/internal/shared/node/7PQSHELoSuCc5vnQQtfG8Q/content/bras%C3%A3oUFT_fundotransparente_RGB.png" alt="Logo UFT">
-      </div>
-      <div class="logo-placeholder">
-        <img src= "https://coliga.digital/_next/image?url=https%3A%2F%2Fprd-coliga-medias.s3.us-east-1.amazonaws.com%2FBrasao_do_Tocantins_svg_18b5d28532.png&w=384&q=75" alt="Logo do Governo do Tocantins">
-      </div>
-      <div class="logo-placeholder">
-        <img src= "https://br.web.img2.acsta.net/pictures/19/09/18/21/44/4368748.jpg" alt="Logo da regina">
-      </div>
-    </div>
-  </footer>
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Posso usar potes de plástico ou tampas de metal?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não é o recomendado. O ideal absoluto para a segurança e conservação são potes de vidro com tampa plástica rosqueável (estilo maionese). Plásticos comuns podem soltar resíduos químicos perigosos e tampas de metal podem enferrujar com a umidade.</p>
+            </div>
+          </div>
 
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Como esterilizar o pote de vidro em casa?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Coloque o pote de vidro e a tampa plástica em uma panela com água cobrindo-os totalmente. Ferva por 15 minutos (contados a partir do início da fervura). Retire-os com cuidado e deixe secar naturalmente de boca para baixo sobre um pano limpo.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Leite esquecido na geladeira por mais de 12h pode ser congelado?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não. Para doação, o leite deve ser congelado logo após a coleta. Se ele passar mais de 12 horas apenas refrigerado na geladeira sem ir para o congelador, a proliferação bacteriana pode aumentar e o leite deve ser descartado.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Os Bombeiros buscam leite em bairros afastados de Palmas?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Sim! O projeto Bombeiro Amigo do Peito realiza a rota de coleta domiciliar cobrindo os bairros da área urbana de Palmas. Basta ligar para agendar que a equipe vai buscar o frasco congelado diretamente na sua residência.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Quanto tempo o leite para doação pode ficar congelado em casa?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Para o processo de doação externa, o frasco de leite coletado pode ficar no congelador doméstico por no máximo 10 dias. É importante entrar em contato com o banco antes desse prazo para garantir que a coleta ocorra a tempo.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Posso juntar leite de coletas de horários diferentes no mesmo pote?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Sim. Você pode coletar o leite em um copo esterilizado e jogá-lo diretamente dentro do frasco que já está congelado no freezer. Deixe sempre um espaço de dois dedos livre na borda do pote. A validade final considerará o dia da primeira coleta.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="faq-topico-grupo">
+        <h3 class="faq-topico-titulo"><i class="fas fa-baby"></i> Sobre os Bebês Receptores</h3>
+        <div class="faq-grid">
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Posso escolher qual bebê específico vai receber meu leite doado?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não. O banco realiza a distribuição técnica rigorosa com base em prioridades e critérios médicos internos do hospital, direcionando as doses prioritariamente para recém-nascidos prematuros extremos, de baixo peso ou de alto risco na UTI Neonatal.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>O leite doado corre o risco de transmitir alguma doença?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Não, o risco é nulo. Todo o leite coletado pelo Banco de Leite do Hospital Dona Regina passa por um processo industrial e rigoroso de pasteurização térmica e análises microbiológicas laboratoriais antes de ser liberado, destruindo qualquer vírus ou bactéria.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Quem são exatamente os bebês internados que dependem dessa doação?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>São pequenos guerreiros da UTI e UCI Neonatal que nasceram antes do tempo ou com peso muito baixo (às vezes menos de 1kg). Suas mães temporariamente podem não conseguir produzir o volume total necessário devido ao estresse do parto prematuro.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>Por que o leite doado é considerado um "medicamento" na UTI?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Para um prematuro, o leite humano previne infecções intestinais gravíssimas (como a enterocolite necrotizante), fortalece o sistema de defesa frágil do corpo, reduz o tempo de internação e diminui drasticamente a mortalidade neonatal.</p>
+            </div>
+          </div>
+
+          <div class="faq-card item-buscavel">
+            <div class="card-pergunta">
+              <h3>O leite de uma mãe de bebê a termo (9 meses) serve para um bebê prematuro?</h3>
+              <i class="fas fa-chevron-down icone-seta"></i>
+            </div>
+            <div class="card-resposta">
+              <p>Sim, serve perfeitamente. O Banco de Leite analisa a composição calórica e de acidez de cada lote durante as etapas de triagem em laboratório. Assim, os profissionais conseguem classificar e direcionar o leite ideal para as necessidades nutricionais específicas de cada bebê.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+</div>
+    <!--Footer-->
+  <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand-header">
+                    <img src="../assets/logo - BL.png" class="footer-logo-img" alt="Logo" width="100px">
+                    <div>
+                        <p>Banco de Leite Humano</p>
+                        <span>Hospital Dona Regina</span>
+                    </div>
+                </div>
+                <p>
+                    A maior maternidade pública do Estado do Tocantins,
+                    referência em atendimentos para usuários do SUS.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>
+                            Q. 104 Norte Rua NE 5, 41<br>
+                            Palmas - TO
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>(63) 3027-5120</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>blhdonaregina@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Links úteis</h4>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i><a href="https://www.to.gov.br/saude/">Secretaria da Saúde</a></li>
+                    <li><i class="fas fa-chevron-right"></i><a href="https://www.to.gov.br/saude/porte-iii-hospital-e-maternidade-dona-regina-hmdr/1ui795ojm2bq">Hospital e Maternidade Dona Regina</a></li>
+                    <li><i class="fas fa-chevron-right"></i><a href="Informações.html">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Siga nossas redes</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5563999999999?"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <p class="footer-copyright">
+                    © 2026 Hospital Dona Regina.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="logo-placeholder">
+                <img src="https://www.sisemp.org.br/media/sisemp/_versions/b5ace700f60379_slide_noticia.jpg">
+            </div>
+            <div class="logo-placeholder">
+                <img src="https://docs.uft.edu.br/share/proxy/alfresco-noauth/api/internal/shared/node/7PQSHELoSuCc5vnQQtfG8Q/content/bras%C3%A3oUFT_fundotransparente_RGB.png">
+            </div>
+            <div class="logo-placeholder">
+                <img src="https://coliga.digital/_next/image?url=https%3A%2F%2Fprd-coliga-medias.s3.us-east-1.amazonaws.com%2FBrasao_do_Tocantins_svg_18b5d28532.png&w=384&q=75">
+            </div>
+            <div class="logo-placeholder">
+                <img src="../assets/logo - BL.png" alt="Logo Dona Regina">
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/faq.js"></script>
 </body>
 </html>
