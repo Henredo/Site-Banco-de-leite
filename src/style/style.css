@@ -1536,6 +1536,100 @@ footer {
 }
 
 
+/* Estilos da Seção de Doação de Leite */
+.secao-doacao {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.doacao-topo {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.card-requisitos, .card-contatos {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #0056b3; /* Cor institucional */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-requisitos h2, .card-contatos h2 {
+    color: #0056b3;
+    margin-top: 0;
+}
+
+.lista-contatos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-contatos li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.titulo-passos {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Grid para os 4 passos do panfleto */
+.grid-passos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card-passo {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.card-passo:hover {
+    transform: translateY(-5px);
+}
+
+.numero-passo {
+    background: #0056b3;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.card-passo h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.card-passo p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
 /* ── Responsividade das novas seções ── */
 @media (max-width: 1000px) {
   .porque-grid {
