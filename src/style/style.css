@@ -1910,3 +1910,149 @@ footer {
     padding: 24px;
   }
 }
+/* ==========================================
+   PÁGINA DE SERVIÇOS - BANCO DE LEITE
+   ========================================== */
+
+.titulo-servicos-pagina {
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.container-card-servico {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card-servico {
+    display: flex;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.barra-amarela {
+    width: 6px;
+    background-color: #e8b400;
+    flex-shrink: 0;
+}
+
+.conteudo-card {
+    padding: 30px;
+    width: 100%;
+}
+
+.tittle-servico {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a5fa8;
+    margin-bottom: 20px;
+}
+
+.row-servico {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.info-servico-col {
+    flex: 2;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bloco-texto-servico h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.bloco-texto-servico h3 i {
+    color: #1a5fa8;
+    margin-right: 8px;
+}
+
+.bloco-texto-servico p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.meio-atendimento-linha {
+    font-size: 15px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.meio-atendimento-linha i {
+    color: #1a5fa8;
+    margin-right: 8px;
+}
+
+.meio-atendimento-linha span {
+    background: #edf2f7;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.div-botao-servico {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px dashed #cbd5e0;
+}
+
+.div-botao-servico h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4a5568;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.botao-servico {
+    background-color: #1D4ED8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.botao-servico:hover {
+    background-color: #1e40af;
+}
+
+.botao-servico i {
+    margin-right: 8px;
+}
